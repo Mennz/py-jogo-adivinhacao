@@ -10,3 +10,7 @@ while True:
     if palpite == numero_secreto:
         print("Você acertou!")
         break
+    elif palpite < numero_secreto:
+        print("É maior que isso")
+    else:
+        print("É menor que isso")
