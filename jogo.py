@@ -26,7 +26,14 @@ def jogar():
     acertou = False
 
     while tentativas < max_tentativas:
-        palpite = int(input("Seu palpite: "))
+        entrada = input("Seu palpite: ")
+
+        # evita crashar se a pessoa digitar algo que não é número
+        if not entrada.isdigit():
+            print("Digite um número válido")
+            continue
+
+        palpite = int(entrada)
         tentativas += 1
 
         if palpite == numero_secreto:
